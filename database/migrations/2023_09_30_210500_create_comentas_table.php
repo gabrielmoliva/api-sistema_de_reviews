@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comentas', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('comenta', function (Blueprint $table) {
+            $table->integer('review_id');
+            $table->string('usuario_login', 20);
+            $table->string('comentario', 200);
         });
     }
 
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comentas');
+        Schema::dropIfExists('comenta');
     }
 };
