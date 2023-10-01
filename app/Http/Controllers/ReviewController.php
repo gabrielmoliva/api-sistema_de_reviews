@@ -16,7 +16,7 @@ class ReviewController extends Controller{
         $validatedData = $request->validate([
             'texto' => 'required|string',
             'rating' => 'required|integer',
-            'nota' => 'required|double',
+            'nota' => 'required|integer',
             'id_review' => 'required|integer',
             'usuario_login' => 'required|string',
             'obra_id' => 'required|integer',
@@ -36,7 +36,7 @@ class ReviewController extends Controller{
         $validatedData = $request->validate([
             'texto' => 'required|string',
             'rating' => 'required|integer',
-            'nota' => 'required|double',
+            'nota' => 'required|integer',
             'id_review' => 'required|integer',
             'usuario_login' => 'required|string',
             'obra_id' => 'required|integer',

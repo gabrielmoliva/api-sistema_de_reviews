@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email', 30);
             $table->date('data_de_nascimento');
             $table->char('genero');
-            $table->binary('foto_de_perfil');
+            $table->integer('foto_de_perfil');
             $table->timestamps();
         });
     }

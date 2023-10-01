@@ -18,8 +18,8 @@ class UsuarioController extends Controller{
             'senha' => 'required|string',
             'email' => 'required|string',
             'data_de_nascimento' => 'required|date',
-            'genero' => 'required|char',
-            'foto_de_perfil' => 'required|blob',
+            'genero' => 'required|string',
+            'foto_de_perfil' => 'required|integer',
         ]);
 
         $usuario = usuario::create($validatedData);
@@ -37,8 +37,8 @@ class UsuarioController extends Controller{
             'senha' => 'required|string',
             'email' => 'required|string',
             'data_de_nascimento' => 'required|date',
-            'genero' => 'required|char',
-            'foto_de_perfil' => 'required|blob',
+            'genero' => 'required|string',
+            'foto_de_perfil' => 'required|integer',
         ]);
 
         $usuario->update($validatedData);

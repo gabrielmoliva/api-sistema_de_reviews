@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('texto', 300);
             $table->integer('rating');
-            $table->double('nota');
+            $table->integer('nota');
             $table->integer('id_review');
             $table->string('usuario_login', 20);
             $table->integer('obra_id');

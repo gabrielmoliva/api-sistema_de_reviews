@@ -23,15 +23,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/usuario', [UsuarioController::class, 'index']);
 Route::post('/usuario', [UsuarioController::class, 'store']);
-Route::put('/usuario', [UsuarioController::class, 'update']);
-Route::delete('/usuario', [UsuarioController::class, 'destroy']);
+Route::get('/usuario/{usuario}', [UsuarioController::class, 'show']);
+Route::put('/usuario/{usuario}', [UsuarioController::class, 'update']);
+Route::delete('/usuario/{usuario}', [UsuarioController::class, 'destroy']);
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::post('/review', [ReviewController::class, 'store']);
-Route::put('/review', [ReviewController::class, 'update']);
-Route::delete('/review', [ReviewController::class, 'destroy']);
+Route::get('/review/{review}', [ReviewController::class, 'show']);
+Route::put('/review/{review}', [ReviewController::class, 'update']);
+Route::delete('/review/{review}', [ReviewController::class, 'destroy']);
 
 Route::get('/comenta', [ComentaController::class, 'index']);
 Route::post('/comenta', [ComentaController::class, 'store']);
-Route::put('/comenta', [ComentaController::class, 'update']);
-Route::delete('/comenta', [ComentaController::class, 'destroy']);
+Route::get('/comenta/{comenta}', [ComentaController::class, 'show']);
+Route::put('/comenta/{comenta}', [ComentaController::class, 'update']);
+Route::delete('/comenta/{comenta}', [ComentaController::class, 'destroy']);
