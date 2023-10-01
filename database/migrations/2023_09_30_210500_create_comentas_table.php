@@ -12,9 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('comentas', function (Blueprint $table) {
+            $table->id();
             $table->integer('review_id');
             $table->string('usuario_login', 20);
             $table->string('comentario', 200);
+            $table->timestamps();
         });
     }
 

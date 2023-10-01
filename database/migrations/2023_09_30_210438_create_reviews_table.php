@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('reviews', function (Blueprint $table) {
+            $table->id();
             $table->string('texto', 300);
             $table->integer('rating');
             $table->double('nota');
@@ -19,6 +20,7 @@ return new class extends Migration
             $table->string('usuario_login', 20);
             $table->integer('obra_id');
             $table->string('admin_login', 20);
+            $table->timestamps();
         });
     }
 
